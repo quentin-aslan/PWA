@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import LoginView from "@/views/LoginView.vue";
 import { useUserStore } from "@/stores/userStore";
 import { storeToRefs } from "pinia";
+import DailyJournalHistory from "@/views/DailyJournalHistory.vue";
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,6 +12,11 @@ const router = createRouter({
 			path: "/",
 			name: "home",
 			component: HomeView,
+		},
+		{
+			path: "/daily-journal-history",
+			name: "dailyJournalHistory",
+			component: DailyJournalHistory,
 		},
 		{
 			path: "/login",
