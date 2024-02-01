@@ -8,7 +8,7 @@
 			</button>
 		</div>
 		<div class="flex-1">
-			<a class="btn btn-ghost text-xl">🙂</a>
+			<a @click="router.push('/')" class="btn btn-ghost text-xl">🙂</a>
 		</div>
 		<div class="flex-none">
 			<button class="btn btn-square btn-ghost">
@@ -25,4 +25,6 @@
 	</div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import router from "@/router";
+</script>

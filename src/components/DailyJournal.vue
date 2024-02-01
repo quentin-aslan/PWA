@@ -8,6 +8,7 @@
 				class="textarea textarea-bordered textarea-lg w-full max-w-xs"
 				:class="{ 'textarea-success': todayContent }"
 			/>
+			<a class="link" @click="router.push('daily-journal-history')"> Daily Journal History 🔗</a>
 		</div>
 	</div>
 </template>
@@ -16,6 +17,7 @@ import { ref, computed, onBeforeMount, watch } from "vue";
 import { getFormattedDate } from "@/utils";
 import { useUserStore } from "@/stores/userStore";
 import { storeToRefs } from "pinia";
+import router from "@/router";
 const userStore = useUserStore();
 const { dailyJournal } = storeToRefs(userStore);
 
