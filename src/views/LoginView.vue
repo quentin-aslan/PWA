@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8 flex flex-col gap-3">
+  <div class="p-8 flex flex-col gap-6">
     <label for="username" aria-labelledby="username">Your e-mail : </label>
     <input
       aria-label="Your e-mail"
@@ -14,7 +14,7 @@
     />
     <button
       class="btn"
-      :class="{ 'btn-success': usernameValue.length > 0 }"
+      :class="{ 'btn-success animate-bounce': usernameValue.length > 0 }"
       @click="submit"
       :disabled="isLoading || usernameValue.length === 0"
     >
