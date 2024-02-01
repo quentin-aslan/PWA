@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import { useUserStore } from "@/stores/userStore";
 import { getFormattedDate } from "@/utils";
-import { DailyJournal } from "@/types/types";
+import type { DailyJournal } from "@/types/types";
 
 const userStore = useUserStore();
 const { dailyJournal, getMoodFromDate } = userStore;

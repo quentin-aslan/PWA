@@ -1,6 +1,6 @@
 export type Mood = {
 	date: string;
-	mood: boolean; // 0 - 5
+	mood: number; // 0 - 5
 };
 
 export type DailyJournal = {

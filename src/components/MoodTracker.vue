@@ -38,7 +38,7 @@ watch(moodValue, (value) => {
 		const indexOfTodayMood = moodTracker.value.indexOf(todayMood.value);
 		moodTracker.value[indexOfTodayMood].mood = value;
 	} else {
-		moodTracker.value.push({ date: new Date(), mood: value });
+		moodTracker.value.push({ date: Date.now().toString(), mood: value });
 	}
 
 	localStorage.setItem("moodTracker", JSON.stringify(moodTracker.value));

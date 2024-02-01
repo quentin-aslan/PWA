@@ -29,7 +29,7 @@ const todayContent = computed(() => {
 });
 
 onBeforeMount(() => {
-	contentValue.value = todayContent.value?.content;
+	contentValue.value = todayContent.value?.content ?? "";
 });
 
 watch(contentValue, (value) => {
@@ -38,7 +38,7 @@ watch(contentValue, (value) => {
 		const indexOfTodayJournal = dailyJournal.value.indexOf(todayContent.value);
 		dailyJournal.value[indexOfTodayJournal].content = value;
 	} else {
-		dailyJournal.value.push({ date: new Date(), content: value });
+		dailyJournal.value.push({ date: Date.now().toString(), content: value });
 	}
 
 	localStorage.setItem("dailyJournal", JSON.stringify(dailyJournal.value));
