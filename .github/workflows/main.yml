@@ -26,7 +26,7 @@ jobs:
         port: 22
         script: |
           cd ~/app/PWA
-          git pull origin master
+          git pull origin main
           git status
           npm install
           npm run build
