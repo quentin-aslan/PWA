@@ -1,5 +1,5 @@
 <template>
-	<div class="p-8 flex flex-col gap-6">
+	<form class="p-8 flex flex-col gap-6">
 		<label for="username" aria-labelledby="username">Your e-mail : </label>
 		<input
 			aria-label="Your e-mail"
@@ -13,6 +13,7 @@
 			v-model="usernameValue"
 		/>
 		<button
+			type="submit"
 			class="btn"
 			:class="{ 'btn-success animate-bounce': usernameValue.length > 0 }"
 			:disabled="isLoading || usernameValue.length === 0"
@@ -21,7 +22,7 @@
 			<span v-show="isLoading" class="loading loading-dots loading-md"></span>
 			<span v-show="!isLoading">Submit</span>
 		</button>
-	</div>
+	</form>
 </template>
 <script lang="ts" setup>
 import { ref } from "vue";
