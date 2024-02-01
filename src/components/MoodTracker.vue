@@ -1,10 +1,16 @@
 <template>
-	<div class="rating gap-1">
-		<input type="radio" v-model="moodValue" value="1" class="mask mask-heart bg-red-400" :checked="moodValue === 1" />
-		<input type="radio" v-model="moodValue" value="2" class="mask mask-heart bg-orange-400" :checked="moodValue === 2" />
-		<input type="radio" v-model="moodValue" value="3" class="mask mask-heart bg-yellow-400" :checked="moodValue === 3" />
-		<input type="radio" v-model="moodValue" value="4" class="mask mask-heart bg-lime-400" :checked="moodValue === 4" />
-		<input type="radio" v-model="moodValue" value="5" class="mask mask-heart bg-green-400" :checked="moodValue === 5" />
+	<div class="card bg-neutral text-neutral-content m-10">
+		<div class="card-body items-center text-center gap-5 p-5">
+			<div class="rating rating-lg gap-1">
+				<input type="radio" v-model="moodValue" value="1" class="mask mask-heart bg-red-400" :checked="moodValue === 1" />
+				<input type="radio" v-model="moodValue" value="2" class="mask mask-heart bg-orange-400" :checked="moodValue === 2" />
+				<input type="radio" v-model="moodValue" value="3" class="mask mask-heart bg-yellow-400" :checked="moodValue === 3" />
+				<input type="radio" v-model="moodValue" value="4" class="mask mask-heart bg-lime-400" :checked="moodValue === 4" />
+				<input type="radio" v-model="moodValue" value="5" class="mask mask-heart bg-green-400" :checked="moodValue === 5" />
+			</div>
+
+			<div v-if="todayMood" class="badge">Your mood is saved for today ✅</div>
+		</div>
 	</div>
 </template>
 <script lang="ts" setup>
